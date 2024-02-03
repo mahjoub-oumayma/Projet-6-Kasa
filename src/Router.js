@@ -1,17 +1,19 @@
+import react from "react"
 import {Routes, Route} from "react-router-dom"
 import Home from "./Pages/Home/Home"
-import Apropos from "./Pages/Apropos/Apropos"
-import Eroor from "./Pages/Eroor/Eroor"
+import Apropos from "./Pages/Aboutpage/Aboutpage"
+import Eroor from "./Pages/Erorpage/Erorpage"
 import Logement from "./Pages/Logement/Logement"
-function App() {
+function Router () {
     return (
-      <div className='Router'>
+      
       
         <Routes>
-          <Route path="/Home" element={<Home/>} />
+          <Route path="/" element={<Home/>} />
           <Route path="/Apropos" element={<Apropos/>} />
-          <Route path="/" element={<Eroor/>} />
+          <Route path="/*" element={<Eroor/>} />
           <Route path="/logement/:id" element={<Logement/>} />
         </Routes>
-        </div>
+        
     )};
+    export default Router  ;

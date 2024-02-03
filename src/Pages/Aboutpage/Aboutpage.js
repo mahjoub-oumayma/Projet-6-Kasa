@@ -1,16 +1,17 @@
 import react from "react-router-dom"
- import Footer from "../../Components/Footer/Footer.js"
-import header from "../../Components/header/header.js"
+import Header from "../../Components/header/header.js"
+import Footer from "../../Components/Footer/Footer.js"
 import banner__img from "../../Asset/images/Banner-imgs/Aboutbanner.png"
-import banner from "../../Components/Banner/Banner.js"
+import Banner from "../../Components/Banner/Banner.js"
 import Collapse from "../../Components/Collapse/Collapse.js"
 function About() {
 
   return (
     <div className="About">
 
-      <header />
+      <Header />
       <main>
+
         <banner image={banner__img} titre="" />
 
 
