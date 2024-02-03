@@ -2,11 +2,12 @@ import React, { useState } from "react";
 
 //import React, { useState } from "react";
 import { useParams, Navigate } from "react-router-dom";
-import DataFichLogement from "../../datas/logement.json";
-import Collapse from "../Componenets/Collapse/Collapse.js";
-import Carrousel from "../../Fichelogement/carousel.js"
-import emptyStar from "../../assets/images/rate/startRempli.png";
-import fullStar from "../../assets/images/rate/star-inactive 1.png";
+import emptyStar from "../../Asset/images/rate/star-active 1.png";
+import fullStar from "../../Asset/images/rate/star-inactive 1.png"
+import DataFichLogement from "../../datas/logements.json";
+import Collapse from "../Collapse/Collapse.js";
+import Carrousel from "../Fichelogement/carousel.js"
+
 
 
 const FicheLogement = () => {
@@ -16,12 +17,12 @@ const FicheLogement = () => {
   const ficheLogement = DataFichLogement.find((logement) => logement.id === id);
 
   /* Tags */
-  const tagsLogement = ficheLogement?.tags.map((tags, i) => {
+  const tagsLogement = ficheLogement.tags.map((tags, i) => {
     return <tagsLogement key={i} nom={tags} />;
   });
 
   /* Équipements */
-  const equipements = ficheLogement?.equipments.map((equipment, i) => {
+  const equipements = ficheLogement.equipments.map((equipment, i) => {
     return (
       <ul key={i}>
         <li>{equipment}</li>
@@ -52,10 +53,10 @@ const FicheLogement = () => {
               <div className="description-info__proprietaire">
                 {/* Hosting */}
                 <div className="description-info__proprietaire__nom-prop">
-                  <Host
-                    name={ficheLogement?.host.name}
-                    picture={ficheLogement?.host.picture}
-                  />
+                {/*  <Host
+                    name={ficheLogement.host.name}
+                   picture={ficheLogement.host.picture} />*/}
+                  
                 </div>
                 {/* Rating */}
                 <div className="description-info__proprietaire__rate">
@@ -69,7 +70,7 @@ const FicheLogement = () => {
             <div className="description-centent__description">
               <Collapse
                 title="Description"
-                content={ficheLogement?.description}
+                content={ficheLogement.description}
               />
             </div>
             <div className="description-centent__equipement">
