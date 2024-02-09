@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from "react";
+import style from '../../Styles/Components/Carousel.scss'
 
 
 function Carrousel({ slides }) {

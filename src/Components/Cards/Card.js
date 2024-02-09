@@ -1,5 +1,6 @@
 import React from 'react';
 import route from "react-router-dom";
+import style from "../../Styles/Components/Card.scss"
 
 
 function Card({image, title}) {

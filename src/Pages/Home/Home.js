@@ -1,5 +1,5 @@
-import react from "react"
 import Header from "../../Components/header/header.js"
+import nav from '../../Components/Nav/Nav.js'
 import Footer from "../../Components/Footer/Footer.js"
 import imageHomeBanner from "../../Asset/images/Banner-imgs/bannerHome.png"
 import Gallery from "../../Components/Gallery/Gallery.js"

@@ -1,6 +1,5 @@
 import React from "react";
-import route from "react-router-dom";
-
+import style from '../../Styles/Components/Banner.scss'
 
 function Banniere({ image, texte }) {
   return (

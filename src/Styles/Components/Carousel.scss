@@ -1,0 +1,93 @@
+.slide {
+  border-radius: 0.8rem;
+  box-shadow: 0 0 10px rgba(0,0,0,.1);
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width:1240px;
+  height: 415px;
+  
+  }
+  .left-Arrow{
+    cursor: pointer;
+    font-size: 25px;
+    height: auto!important;
+    opacity: .5;
+    width: 50px!important;
+  }
+  .right-Arrow{
+    cursor: pointer;
+    font-size: 25px;
+    height: auto!important;
+    opacity: .5;
+    width: 50px!important;
+  }
+  .slider {
+   /* @include WH-full;*/
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity ease-in-out 0.6s; //petit effet d'apparition progressive de l'image dans le slide
+  
+    @media screen and (min-width: 375px) {
+      border-radius: 15px;
+    }
+    & img {
+     /* @include WH-full;*/
+      object-fit: cover;
+      position: absolute;
+      left: 0%;
+      right: 0%;
+      top: 0%;
+      bottom: 0%;
+      mix-blend-mode: normal;
+      border-radius: 10px;
+  
+      @media screen and (min-width: 375px) {
+        border-radius: 15px;
+      }
+    }
+    .slider__number {
+      margin-left: 5px;
+  
+      @media screen and (max-width: 375px) {
+        .slide {
+          border-radius: 0.8rem;
+          box-shadow: 0 0 10px rgba(0,0,0,.1);
+          display: flex;
+          justify-content: center;
+          margin: auto;
+          overflow: hidden;
+          position: relative;
+          width: 335px;
+          height: 255px;
+          
+          }
+        display: block;
+        position: absolute;
+        font-size: 18px;
+        font-weight: 500;
+        color: #ffffff;
+        left: 48%;
+        top: 86%;
+    
+      }
+    }
+  }
+  .active {
+    opacity: 1;
+  }
+  
+ /* .right-Arrow {
+    @include rightArrow-style;
+  }*/
+  
+  /*.left-Arrow {
+    @include leftArrow-style;
+  }*/

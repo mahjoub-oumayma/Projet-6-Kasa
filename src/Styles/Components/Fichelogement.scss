@@ -1,0 +1,173 @@
+.Fiche-container {
+    color: #ff6060;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  .Fiche-logement {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .description-info__titletags{
+    font-size: 35px;
+    margin: 0;
+  }
+  .description-info__titletags__title{
+    font-size: 18px;
+    margin: 0.2rem 0 1rem;
+  }
+  .tag{
+    background: #ff5656;
+    border-radius: 0.5rem;
+    border-color: #ff6060;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+    color: #fff;
+    font-size: 15px;
+    margin: 0 1rem 0 0;
+    padding: 0.2rem 1.5rem;
+  }
+  .description-info {
+   /* @include flex-column;*/
+    &__titletags {
+      /*@include flex-column;*/
+  
+      &__title {
+        /*@include flex-column;*/   
+    margin-top: 29px;
+    margin-bottom: 17px;
+    margin-left: 138px;
+.titre-logement {
+           font-size: 18px; 
+           font-weight: 500px
+        }
+        .endroit-logement {
+           font-size: 14px;
+           font-weight: 500;
+        }
+      }
+      &__tags {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        margin-left: 135px;
+      }
+    }
+    @media screen and (max-width: 375px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      &__titletags {
+       flex-direction: column;
+        margin-bottom: 30px;
+        &__title {
+         /* @include flex-column;*/
+  
+          .titre-logement {
+             font-size:36px;
+             font-weight: 500;
+            display: flex;
+            align-items: flex-end;
+          }
+          .endroit-logement {
+             font-size: 18px; 
+             font-weight: 500;
+            display: flex;
+            align-items: flex-end;
+          }
+        }
+      }
+    }
+  
+    &__proprietaire {
+      /*@extend %flex-rowReverse;*/
+  
+      @media screen and (max-width: 375px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-items: flex-end;
+        justify-content: space-between;
+        margin-right: 128px;
+      }
+      .description-info__proprietaire__nom-prop{
+     
+         font-size:18px;
+          font-weight: 500;
+          margin-right: 22px;
+          text-align: right;
+          width: 93px;
+          align-items: center;
+         display: flex;
+        }
+        .photo-proprietaire {
+          border-radius: 50%;
+          width: 64px;
+          height: 64px;
+          object-fit: cover;
+        }
+      }
+      &__rate {
+       /* @include flex-end;*/
+        margin-top: 20px;
+        .etoile {
+          width: 15px;
+          height: 15px;
+  
+          @media screen and (max-width: 375px) {
+            width: 30px;
+            height: 30px;
+          }
+        }
+      }
+    }
+  
+  .description-centent {
+    width: 100%;
+    /*@include flex-column;*/
+  
+    @media screen and (max-width: 375px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+      &__description {
+    display: flex; 
+    justify-content: space-between;  
+    width: 35%;
+    height: 52px;
+    margin-left: 120px;
+    margin-top: 30px;
+    padding-right: 40px;
+     align-items: center;
+    background-color: #ff5656;
+    border-radius: 0.3rem;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+
+      }
+      &__equipement {
+        margin-right: 124px;
+        padding-left: 35px;
+        display: flex; 
+        justify-content: space-between;  
+        width: 35%;
+        height: 52px;
+        
+        margin-top: 30px;
+        padding-right: 40px;
+         align-items: center;
+        background-color: #ff5656;
+        border-radius: 0.3rem;
+        box-shadow: 0 0 10px rgba(0,0,0,.1);
+        color: #fff;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+    
+      }
+    }
+  }

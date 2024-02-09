@@ -1,8 +1,16 @@
-.home_logo {
+.Logo {
     height: 60px;
 }
-
-.div_container {
+.header{
+    display: flex;
+    justify-content: space-between;
+     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    margin: auto
+}
+.header_fig {
     padding: 30px 70px;
     display: flex;
     justify-content: space-between;
