@@ -1,14 +1,9 @@
-import react from "react"
-import route from 'react-router-dom'
-import logo from "../../Asset/images/Logo/Size=Desktop (2).png"
-import Logo from '../../Asset/images/Logo/D_Footer.png'
-import style from '../../Styles/Components/Footer.scss'
-
-function Footer() {
+import React from 'react';
+import logo from "../../assets/images/logo/logo_footer.png"
+const Footer = () => {
     return (
       <footer className="footer">
         <img src={logo} alt="" className="footer__logo" />
-        <img src={Logo} alt="footer" className="footer_mobil"/>
         <p className="footer__text-copyright">
           © 2020 Kasa. All rights reserved
         </p>
@@ -17,5 +12,3 @@ function Footer() {
 }
 
 export default Footer;
-        
-    

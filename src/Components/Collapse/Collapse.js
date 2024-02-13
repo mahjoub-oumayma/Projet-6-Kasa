@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import Style from '../../Styles/Components/Collapse.scss'
 
-const Collapse = ({ title, content, index }) => {
+const Collapse = ({ title, content }) => {
   //declaration du state en utilisant le Hook useState()
   const [isOpen, setIsOpen] = useState(false); // je definie le state du toggle (et false par défaut)
 
@@ -12,7 +11,7 @@ const Collapse = ({ title, content, index }) => {
 
   return (
     // affiche le collapse replié par défaut et l'ouvre au clic puis le referme au clic en faisant disparaitre le texte et le style
-    <div className="collapse" id={"collapse-" + index}>
+    <div className="collapse__dropdown__container">
       <div className="collapse__dropdown__title">
         <h2>{title}</h2>
         <p onClick={display}>

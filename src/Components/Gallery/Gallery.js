@@ -1,27 +1,22 @@
 import React from "react";
-import {Link} from "react-router-dom"
-import logement from "../../datas/logements.json"
-import Card from "../../Components/Cards/Card.js"
-import style from '../../Styles/Components/Gallery.scss'
+import { Link } from "react-router-dom";
+import logements from "../../datas/logement.json";
+import Card from "../cards/Card";
 
-function Gallery (){
+const Gallery = () => {
   return (
     <div className="home_gallery">
-      
-      {logement.map((logement) => {
+      {logements.map((logement) => {
         return (
-          <div className="Gallery">
           <article key={logement.id}>
             <Link to={`/logement/${logement.id}`}>
               <Card image={logement.cover} title={logement.title} />
             </Link>
           </article>
-          </div>
         );
       })}
     </div>
-  )
+  );
 };
 
 export default Gallery;
-

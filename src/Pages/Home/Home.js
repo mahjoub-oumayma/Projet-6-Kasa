@@ -1,20 +1,21 @@
-import Header from "../../Components/header/header.js"
-import nav from '../../Components/Nav/Nav.js'
-import Footer from "../../Components/Footer/Footer.js"
-import imageHomeBanner from "../../Asset/images/Banner-imgs/bannerHome.png"
-import Gallery from "../../Components/Gallery/Gallery.js"
-import Banner from "../../Components/Banner/Banner.js"
+import React from "react";
+import Banner from "../../components/banner/Banner";
+import Footer from "../../components/footer/Footer";
+import Gallery from "../../components/gallery/Gallery";
+import Header from "../../components/header/Header";
+import imgHomeBanner from "../../assets/images/banner/homeBanner.png";
 
-function Home () {
-    return ( 
-        <div className="home">
-            <Header/>
-            <main>
-                <Banner texte="Chez vous, partout et ailleurs" image={imageHomeBanner} />
-                <Gallery/>
-            </main>
-            <Footer/>
-        </div>
-    );
+const Home = () => {
+  return (
+    <div className="home">
+      <Header />
+      <main>
+        <Banner texte="Chez vous, partout et ailleurs" image={imgHomeBanner} />
+        <Gallery />
+      </main>
+      <Footer />
+    </div>
+  );
 };
+
 export default Home;
