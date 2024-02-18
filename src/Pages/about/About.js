@@ -1,9 +1,9 @@
 import React from "react";
-import Footer from "../../components/footer/Footer";
-import Header from "../../components/header/Header";
-import Banner from "../../components/banner/Banner";
+import Footer from "../../Components/footer/Footer";
+import Header from "../../Components/header/Header";
+import Banner from "../../Components/banner/Banner";
 import imgBannerAbout from "../../assets/images/banner/aboutBanner.png";
-import Collapse from "../../components/collapse/Collapse";
+import Collapse from "../../Components/collapse/Collapse";
 import CollapseData from "../../datas/collapses.json";
 
 const About = () => {

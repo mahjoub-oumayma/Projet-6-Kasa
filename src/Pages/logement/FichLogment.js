@@ -1,7 +1,7 @@
 import React from "react";
-import FicheLogementDisplay from "../../components/ficheLogement/FicheLogementDisplay";
-import Footer from "../../components/footer/Footer";
-import Header from "../../components/header/Header";
+import FicheLogementDisplay from "../../Components/ficheLogement/FicheLogementDisplay";
+import Footer from "../../Components/footer/Footer";
+import Header from "../../Components/header/Header";
 
 const FichLogment = () => {
   return (
