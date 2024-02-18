@@ -4,6 +4,7 @@
   margin: 20px 0;
   justify-content: center;
   align-items: center;
+
   &__dropdown {
     width: 100%;
 
@@ -28,13 +29,28 @@
         color: $tertiary-color;
         @include font(24px, 500);
       }
+
       p {
         color: $tertiary-color;
+
         i {
+
           cursor: pointer;
+
         }
       }
     }
+
+    .fa-chevron-down {
+      transition-duration: 0.3s;
+      transform: rotate(180deg);
+    }
+
+    .fa-chevron-up {
+      transition-duration: 0.3s;
+      transform: rotate(-180deg);
+    }
+
     &__content {
       background-color: $secondary-color;
       width: 100%;
