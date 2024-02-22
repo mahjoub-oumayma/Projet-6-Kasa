@@ -1,32 +1,54 @@
-import React, { useState } from "react";
+
+import React from "react";
 
 const Collapse = ({ title, content }) => {
-  //declaration du state en utilisant le Hook useState()
-  const [isOpen, setIsOpen] = useState(false); // je definie le state du toggle (et false par défaut)
+  const isCollapse = (e) => {
+    e.preventDefault();
+    const divText = e.target.nextSibling;
+    const arrow = e.target.lastChild;
 
-  //fonction pour gérer l'afichage du contenu des collapses
-  const display = () => {
-    setIsOpen(!isOpen);
+    if (!divText.classList.contains("show")) {
+      divText.classList.add("show");
+      arrow.classList.add("rotate");
+    } else {
+      divText.classList.remove("show");
+      arrow.classList.remove("rotate");
+    }
   };
-
   return (
-    // affiche le collapse replié par défaut et l'ouvre au clic puis le referme au clic en faisant disparaitre le texte et le style
-    <div className="collapse__dropdown__container">
-      <div className="collapse__dropdown__title">
-        <h2>{title}</h2>
-        <p onClick={display}>
-          {isOpen ? (
-            <i className="fa-solid fa-chevron-up"></i>
-          ) : (
-            <i className="fa-solid fa-chevron-down"></i>
-          )}
+    <article className="collapse ">
+      <button type="button" className="collapse__button" onClick={isCollapse}>
+       <h2> {title}</h2>
+
+        <p className="collapse__arrow">
+          <svg
+            width="28"
+            height="17"
+            viewBox="0 0 28 17"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M24.84 16.3466L27.2 13.9733L14 0.786621L0.80001 13.9866L3.16001 16.3466L14 5.50662L24.84 16.3466Z"
+              fill="white"
+            />
+          </svg>
         </p>
+      </button>
+      <div className="collapse__content">
+        {Array.isArray(content) ? (
+          <ul className="collapse__list">
+            {content.map((equipment, index) => (
+              <li key={index} className="collapse__list-element">
+                {equipment}
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p className="collapse__text">{content}</p>
+        )}
       </div>
-      {/* Si le collapse est à TRUE alors il affichera la description */}
-      <div className="collapse__dropdown__content">
-        {isOpen && <p>{content}</p>}
-      </div>
-    </div>
+    </article>
   );
 };
 
